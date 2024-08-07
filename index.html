@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
+    <script src="decode.js"></script>
 </head>
 <body>
     <div>
         <a>@</a>
         <main>
-            <input placeholder="Digite seu texto">
+            <textarea id="texto_entrada" placeholder="Digite seu texto"></textarea>
         </main>
         <p>Apenas letras minúsculas e sem acento.</p>
         <div>
-            <button>
+            <button name="criptografar" onclick="Criptografar()">
                 Criptografar
             </button>
-            <button>
+            <button name="descriptografar" onclick="Descriptografar()">
                 Descriptografar
             </button>
         </div>
     </div>
     <div>
-        <textarea></textarea>
+        <textarea id="texto_resultante"></textarea>
         <button>Copiar</button>
     </div>
     <footer>Desenvolvido por Nicolas Jorge para o decodificador challenge. 2024</footer>

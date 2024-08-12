@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador</title>
     <script src="decode.js"></script>
-</head>
-<body>
-    <div>
+  </head>
+  <body>
+      <section class="principal">
         <a>@</a>
         <main>
-            <textarea id="texto_entrada" placeholder="Digite seu texto"></textarea>
+          <textarea
+            id="texto_entrada"
+            placeholder="Digite seu texto"
+          ></textarea>
         </main>
         <p>Apenas letras minúsculas e sem acento.</p>
         <div>
-            <button name="criptografar" onclick="Criptografar()">
-                Criptografar
-            </button>
-            <button name="descriptografar" onclick="Descriptografar()">
-                Descriptografar
-            </button>
+          <button name="criptografar" onclick="Criptografar()">
+            Criptografar
+          </button>
+          <button name="descriptografar" onclick="Descriptografar()">
+            Descriptografar
+          </button>
         </div>
-    </div>
-    <div>
+      </section>
+      <section>
         <textarea id="texto_resultante"></textarea>
         <button>Copiar</button>
-    </div>
-    <footer>Desenvolvido por Nicolas Jorge para o decodificador challenge. 2024</footer>
-</body>
+      </section>
+
+  </body>
 </html>

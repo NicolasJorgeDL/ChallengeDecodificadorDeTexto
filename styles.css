@@ -1,25 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap");
+
 :root {
-    --primary-color:#F3F5FC;
-    --secondary-color: #356EA9;
-    --terceary-color: #ADB5BD;
+  --darkblue-400: #072b61;
+  --darkblue-300: #0a3871;
+  --lightblue-200: #eff1fa;
+  --lightblue-100: #f3f5fc;
+  --white: #ffffff;
+  --gray-500: #343a40;
+  --gray-400: #495057;
+  --primary-color: #f3f5fc;
+  --secondary-color: #356ea9;
+  --terceary-color: #adb5bd;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    background-color: var(--primary-color);
+  display: flex;
+  background-color: var(--lightblue-100);
+  width: 100vw;
+  height: 85vh;
+  justify-content: space-between;
+  gap: 1%;
 }
 
 .estrutura {
-    display: flex;
+  display: flex;
+}
+
+.sessao_principal {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5% 0% 0 5%;
 }
 
 .principal {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5% 0 0 15%;
 }
 
+.texto_entrada {
+  width: 100%;
+  height: 80%;
+  resize: none;
+  background-color: var(--lightblue-100);
+  border: none;
+
+  font-family: "Inter", sans-serif;
+  color: var(--darkblue-300);
+  font-size: 2rem;
+}
+
+.texto_entrada::placeholder {
+  color: var(--darkblue-300);
+  font-size: 2rem;
+}
+
+.info {
+  display: flex;
+  gap: 0.5rem;
+  padding: 16px 0 16px 0;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.info__texto_alerta {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+button {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  padding: 3%;
+
+  font-family: "Inter", sans-serif;
+  border-radius: 24px;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 42.5rem;
+}
+
+.buttons__criptografar {
+  border: none;
+  background-color: var(--darkblue-300);
+  color: var(--white);
+}
+
+.buttons__criptografar:active {
+  background-color: var(--darkblue-400);
+}
+
+.buttons__descriptografar {
+  background-color: var(--lightblue-100);
+  color: var(--darkblue-300);
+  border: solid 1px var(--darkblue-300);
+}
+
+.buttons__descriptografar:active {
+  background-color: #d8dfe8;
+}
+
+.resultado {
+  padding: 5% 0% 0 0%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.resultado__img {
+  width: 100%;
+}
+
+.resultado__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 50%;
+  height: 100%;
+  border-radius: 32px;
+  box-shadow: 20px 20px 30px rgb(172, 172, 172);
+}
+
+.resultado__card__destaque {
+  color: var(--gray-500);
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  padding: 0 15%;
+  text-align: center;
+}
+
+.resultado__card__texto {
+  display: flex;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  padding: 0 15%;
+}
+
+.resultado__texto {
+  resize: none;
+  height: 80%;
+  width: 90%;
+  margin: 5% 0;
+  border: none;
+
+  font-family: "Inter", sans-serif;
+  color: var(--gray-400);
+  font-size: 1.5rem;
+}
+
+.resultado__button_copiar {
+  background-color: var(--white);
+  border: solid 1px var(--darkblue-300);
+  color: var(--darkblue-300);
+}
+
+.resultado__button_copiar:active {
+  background-color: #d8dfe8;
+}
+
+@media (max-width: 1199px) {
+  body {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .principal {
+    padding: 2% 0 0 0%;
+    width: 90vw;
+    height: 70vh;
+  }
+  .sessao_principal {
+    padding: 2% 0 0 2%;
+  }
+
+  .texto_entrada {
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .resultado {
+    display: flex;
+    width: 90vw;
+    padding: 0;
+    height: 20vh;
+  }
+
+  .resultado__card {
+    width: 80%;
+    height: fit-content;
+  }
+
+  .resultado__texto {
+    padding: 1%;
+    margin: 1% 0;
+    height: 300px;
+  }
+
+  .resultado__img {
+    width: 0;
+    height: 0;
+  }
+
+  .resultado__button_copiar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 365px) {
+  body {
+    padding: 0;
+    height: auto;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .resultado__card {
+    margin: 2% 0;
+  }
+
+  .resultado__texto {
+    min-height: fit-content;
+  }
+
+  .resultado__button_copiar {
+    width: 70%;
+  }
+}
